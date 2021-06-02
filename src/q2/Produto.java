@@ -2,24 +2,24 @@ package q2;
 
 import java.time.LocalDate;
 
-public class Produto<T> {
+public class Produto {
 	
-	private T id;
+	private Id<?> id;
 	private double valor;
 	private LocalDate dtFab;
 	private LocalDate dtVen;
 	
-	public Produto(T id, double valor, LocalDate dtFab, LocalDate dtVen) {
+	public Produto(Id<?> id, double valor, LocalDate dtFab, LocalDate dtVen) {
 		this.id = id;
 		this.valor = valor;
 		this.dtFab = dtFab;
 		this.dtVen = dtVen;
 	}
 	
-	public T getId() {
+	public Id<?> getId() {
 		return id;
 	}
-	public void setId(T id) {
+	public void setId(Id<?> id) {
 		this.id = id;
 	}
 	public double getValor() {
@@ -45,7 +45,7 @@ public class Produto<T> {
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
 		builder.append("Produto [id=");
-		builder.append(id);
+		builder.append(id.getId());
 		builder.append(", valor=");
 		builder.append(valor);
 		builder.append(", dtFab=");

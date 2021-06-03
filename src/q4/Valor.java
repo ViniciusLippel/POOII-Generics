@@ -33,7 +33,7 @@ public class Valor<T> {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("ChaveValor [chave=");
+		builder.append("Valor [chave=");
 		builder.append(chave);
 		builder.append(", valor=");
 		builder.append(valor);

@@ -1,6 +1,7 @@
 package q1;
 
 public class MeuDadoGenerico<T> {
+	
 	private T dado;
 	
 	public MeuDadoGenerico(T dado){

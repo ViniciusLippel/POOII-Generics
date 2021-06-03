@@ -5,15 +5,21 @@ import java.util.List;
 
 public class Pedido {
 	
-	private List<ProdutoX> listaProdutos = new ArrayList<ProdutoX>();
+	private List<Produto<?>> listaProdutos;
 	
 	public Pedido() {
+		listaProdutos = new ArrayList<Produto<?>>();
 	}
 	
-	public void addProduto(ProdutoX produto) {
-		listaProdutos.add(produto);
+	//add produto
+	public void addProduto(Produto<?> produto) {
+		//Verifica se Produto é do tipo ProdutoX
+		if(produto.getProduto().getClass() == ProdutoX.class) {
+			listaProdutos.add(produto);
+		}
 	}
 	
+	//mostrar lista
 	public String mostrarListaProdutos() {
 		StringBuilder b = new StringBuilder();
 		for (int i=0; i<listaProdutos.size(); i++) {
